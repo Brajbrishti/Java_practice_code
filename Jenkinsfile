@@ -1,5 +1,10 @@
 pipeline {
-    agent any{
+
+    agent any
+
+    tools {
+        jdk 'JDK17'
+    }
         stage('Checkout Code')
         {
             git branch: 'main',
@@ -8,11 +13,11 @@ pipeline {
 
         stage('Compile') 
         {
-            sh 'javac HelloWorld.java'
+            bat 'javac HelloWorld.java'
         }
 
         stage('Run Program') 
         {
-            sh 'java HelloWorld'
+            bat 'java HelloWorld'
     }
-    }}
+}
