@@ -1,23 +1,25 @@
 pipeline {
-
     agent any
 
-    tools {
-        jdk 'JDK17'
-    }
-        stage('Checkout Code')
-        {
-            git branch: 'main',
-            url: 'https://github.com/Brajbrishti/Java_practice_code.git'
+    stages {
+
+        stage('Checkout Code') {
+            steps {
+                git branch: 'main',
+                    url: 'https://github.com/Brajbrishti/Java_practice_code.git'
+            }
         }
 
-        stage('Compile') 
-        {
-            bat 'javac HelloWorld.java'
+        stage('Compile') {
+            steps {
+                bat 'javac HelloWorld.java'
+            }
         }
 
-        stage('Run Program') 
-        {
-            bat 'java HelloWorld'
+        stage('Run Program') {
+            steps {
+                bat 'java HelloWorld'
+            }
+        }
     }
 }
