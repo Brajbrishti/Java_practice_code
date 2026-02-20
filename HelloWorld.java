@@ -3,8 +3,9 @@ public class HelloWorld {
 	  System.out.println("*** Hello Java ****");
 	  		int a=10,b=20,c;
 				c=a+b;
-				
+				d=a*b;
 		   System.out.println(c);
-			System.out.println("Thanks !!!!!!");
+			System.out.println(d);
+			  System.out.println("Thanks !!!!!!");
 	}
     }
