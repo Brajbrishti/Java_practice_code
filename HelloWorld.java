@@ -1,7 +1,7 @@
 public class HelloWorld {
 	public static void main(String[] args){
 	  System.out.println("*** Hello Java ****");
-	  		int a=10,b=20,c;
+	  		int a=10,b=20,c,d;
 				c=a+b;
 				d=a*b;
 		   System.out.println(c);
